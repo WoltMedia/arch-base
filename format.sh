@@ -19,17 +19,17 @@ pacman -S --noconfirm reflector
 reflector --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # Festplatte partitionieren
-sgdisk -n 0:0:+300MiB -t 0:ef02 -c 0:EFI /dev/sda 
-sgdisk -n 0:0:0 -t 0:8300 -c 0:ROOT /dev/sda
+sgdisk -n 0:0:+300MiB -t 0:ef02 -c 0:EFI /dev/vda 
+sgdisk -n 0:0:0 -t 0:8300 -c 0:ROOT /dev/vda
 
 # Festplatte formatieren
-mkfs.vfat /dev/sda1
-mkfs.ext4 -L ROOT /dev/sda2
+mkfs.vfat /dev/vda1
+mkfs.ext4 -L ROOT /dev/vda2
 
 # Einbinden der Partitionen
-mount -L ROOT /mnt
+ar
 mkdir -p /mnt/boot/efi
-mount /dev/sda1 /mnt/boot/efi
+mount /dev/vda1 /mnt/boot/efi
 
 # Installation der Basispakete
 pacstrap /mnt base base-devel linux linux-firmware
@@ -58,7 +58,7 @@ arch-chroot /mnt mkinitcpio -p linux
 arch-chroot /mnt pacman -S --noconfirm grub efibootmgr dosfstools
 arch-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
-
+l
 # Sudo einrichten
 echo "%wheel ALL=(ALL) ALL" >> /mnt/etc/sudoers
 
@@ -81,7 +81,7 @@ arch-chroot /mnt pacman -S --noconfirm xfce4-goodies
 # Login-Manager
 arch-chroot /mnt pacman -S --noconfirm sddm
 #arch-chroot /mnt pacman -S --noconfirm lightdm-gtk-greeter
-arch-chroot /mnt systemctl enable sddm.service
+arch-chroot /mnt systemctl enable lightdm.service
 
 # Netzwerk
 arch-chroot /mnt pacman -S --noconfirm networkmanager
@@ -106,5 +106,6 @@ arch-chroot /mnt pacman -S --noconfirm openssh
 arch-chroot /mnt pacman -S --noconfirm htop
 arch-chroot /mnt pacman -S --noconfirm neofetch
 arch-chroot /mnt pacman -S --noconfirm bash-completion
+
 
 exit 0
