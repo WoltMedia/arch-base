@@ -2,3 +2,5 @@ filezilla
 firefox
 flatpak
 neofetch
+zip
+unzip
