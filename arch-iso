@@ -28,7 +28,7 @@ nfs-utils
 nvme-cli
 os-prober
 pacman-mirrorlist
-pacman-contrib 
+pacman-contrib
 reflector
 rsync
 sudo
