@@ -5,9 +5,9 @@ alsa-firmware
 alsa-utils
 bluez
 bluez-utils
-blueman 
-pulseaudio 
-pulseaudio-bluetooth 
-pulseaudio-alsa 
-pulseaudio-jack 
+blueman
+pulseaudio
+pulseaudio-bluetooth
+pulseaudio-alsa
+pulseaudio-jack
 pulseaudio-equalizer
