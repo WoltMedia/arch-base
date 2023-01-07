@@ -3,6 +3,9 @@ alsa-lib
 alsa-plugins
 alsa-firmware
 alsa-utils
+bluez
+bluez-utils
+blueman 
 pulseaudio 
 pulseaudio-bluetooth 
 pulseaudio-alsa 
