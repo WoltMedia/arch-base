@@ -1,0 +1,4 @@
+curl
+networkmanager
+network-manager-applet
+wget
