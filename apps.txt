@@ -1,0 +1,4 @@
+filezilla
+firefox
+flatpak
+neofetch
