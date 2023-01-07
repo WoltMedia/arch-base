@@ -1,0 +1,3 @@
+dkms
+libva-utils
+mesa
