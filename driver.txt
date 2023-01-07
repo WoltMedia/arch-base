@@ -1,3 +1,7 @@
 dkms
 libva-utils
 mesa
+cups
+cups-pdf
+cups-filters
+cups-pk-helper
