@@ -2,3 +2,6 @@ arc-gtk-theme
 arc-icon-theme
 materia-gtk-theme
 archlinux-wallpaper
+papirus-icon-theme
+nord-gtk
+obsidian-icon-theme
